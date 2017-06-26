@@ -1,4 +1,4 @@
-const { map, mapValues, filter, reduce, includes, forEach, omitBy } = require('lodash')
+const { map, mapValues, filter, reduce, includes, forEach, omitBy, compact } = require('lodash')
 const effectiveAgainst = require('./type-chart')
 const { pokemons, getPokemon } = require('./pokemons')
 
@@ -41,4 +41,4 @@ for (var i = 0; i < 6; i++) {
   bestPokemon[i] = best
 }
 
-console.log(bestPokemon)
+module.exports = compact(bestPokemon)
